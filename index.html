@@ -125,6 +125,19 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/transisi.js"></script>
 	<script src="js/salju.js" type="text/javascript"></script>
+	<script>
+	document.getElementById("tombolMulaiSekarang").addEventListener("click", function () {
+		const elemen = document.documentElement;
+		if (elemen.requestFullscreen) {
+			elemen.requestFullscreen();
+		} else if (elemen.webkitRequestFullscreen) { // Safari
+			elemen.webkitRequestFullscreen();
+		} else if (elemen.msRequestFullscreen) { // IE11
+			elemen.msRequestFullscreen();
+		}
+	});
+</script>
+
 </body>
 
 </html>
